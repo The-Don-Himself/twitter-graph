@@ -1,0 +1,41 @@
+{
+    "name": "the-don-himself/twitter-graph",
+    "description": "An example graph database implementation of Twitter using the Gremlin OGM library.",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "abraham/twitteroauth": "^0.7.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/psr7": "^1.4.2",
+        "symfony/console": "~4.0 || ~3.0 || ~2.7",
+        "symfony/yaml": "~4.0 || ~3.0 || ~2.7",
+        "the-don-himself/gremlin-ogm": "^0.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don Omondi",
+            "email": "don.e.omondi@gmail.com"
+        }
+    ],
+    "keywords": [
+        "Twitter",
+        "graph",
+        "Amazon Neptune",
+        "Azure Cosmos DB",
+        "Datastax Enterprise Graph",
+        "JanusGraph",
+        "Neo4j",
+        "Neo4j",
+        "OrientDB",
+        "gremlin-php",
+        "gremlin-ogm"
+    ],
+    "autoload": {
+        "psr-4": {
+            "TheDonHimself\\TwitterGraph\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "bin": ["bin/graph", "bin/graph.php"]
+}
