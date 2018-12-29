@@ -9,7 +9,7 @@
         "guzzlehttp/psr7": "^1.4.2",
         "symfony/console": "~4.0 || ~3.0 || ~2.7",
         "symfony/yaml": "~4.0 || ~3.0 || ~2.7",
-        "the-don-himself/gremlin-ogm": "^0.1"
+        "the-don-himself/gremlin-ogm": "^0.2"
     },
     "license": "MIT",
     "authors": [
