@@ -220,7 +220,7 @@ class PopulateCommand extends Command
 
         $use_bindings = (false === $forceBindings) ? false : true;
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             if ('compose' === $vendor_name) {
                 $use_bindings = (false === $forceBindings) ? false : true;
@@ -339,7 +339,7 @@ class PopulateCommand extends Command
 
         $vendor_commands = array();
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'] ?? null;
 

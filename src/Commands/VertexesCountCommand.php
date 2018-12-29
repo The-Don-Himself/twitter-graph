@@ -49,7 +49,7 @@ class VertexesCountCommand extends Command
             $gremlin_command = 'g.V().count();';
         }
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'] ?? null;
 

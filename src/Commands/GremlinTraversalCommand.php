@@ -48,7 +48,7 @@ class GremlinTraversalCommand extends Command
             $vendor = $config['vendor'] ?? array();
         }
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'] ?? null;
 

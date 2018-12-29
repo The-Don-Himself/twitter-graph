@@ -51,7 +51,7 @@ class VertexesDropCommand extends Command
             $gremlin_command = 'g.V().drop().iterate();';
         }
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'] ?? null;
 

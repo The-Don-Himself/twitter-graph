@@ -51,7 +51,7 @@ class EdgesDropCommand extends Command
             $gremlin_command = 'g.E().drop().iterate();';
         }
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'];
 

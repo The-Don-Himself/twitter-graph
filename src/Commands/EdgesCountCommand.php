@@ -49,7 +49,7 @@ class EdgesCountCommand extends Command
             $gremlin_command = 'g.E().count();';
         }
 
-        if ($vendor) {
+        if (!empty($vendor)) {
             $vendor_name = $vendor['name'];
             $graph_name = $vendor['graph'];
 
