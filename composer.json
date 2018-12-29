@@ -37,5 +37,9 @@
         }
     },
     "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
     "bin": ["bin/graph", "bin/graph.php"]
 }
