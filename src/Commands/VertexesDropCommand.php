@@ -43,8 +43,6 @@ class VertexesDropCommand extends Command
             $vendor = $config['vendor'] ?? array();
         }
 
-        $label = $input->getOption('label');
-
         if ($label) {
             $gremlin_command = 'g.V().hasLabel("'.$label.'").drop().iterate();';
         } else {
@@ -76,6 +74,8 @@ class VertexesDropCommand extends Command
 
         $output->writeln('Dropping All Vertexes');
 
+        $graph_connection->transactionStart();
+
         try {
             $graph_connection->send($gremlin_command, 'session');
         } catch (ServerException $e) {
@@ -83,6 +83,8 @@ class VertexesDropCommand extends Command
 
             return;
         }
+
+        $graph_connection->transactionStop(true);
 
         $graph_connection->close();
 

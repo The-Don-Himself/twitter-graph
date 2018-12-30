@@ -76,6 +76,8 @@ class EdgesDropCommand extends Command
 
         $output->writeln('Dropping All Edges');
 
+        $graph_connection->transactionStart();
+
         try {
             $graph_connection->send($gremlin_command);
         } catch (ServerException $e) {
@@ -83,6 +85,8 @@ class EdgesDropCommand extends Command
 
             return;
         }
+
+        $graph_connection->transactionStop(true);
 
         $graph_connection->close();
 

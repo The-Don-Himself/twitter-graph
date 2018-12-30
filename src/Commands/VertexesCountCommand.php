@@ -63,6 +63,7 @@ class VertexesCountCommand extends Command
 
         try {
             $graph_connection->open();
+            $graph_connection->message->registerSerializer('\Brightzone\GremlinDriver\Serializers\Gson3', true);
         } catch (InternalException $e) {
             $output->writeln($e->getMessage());
 

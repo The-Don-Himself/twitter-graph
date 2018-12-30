@@ -7,6 +7,8 @@ use Brightzone\GremlinDriver\ServerException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Yaml\Yaml;
 use TheDonHimself\GremlinOGM\GraphConnection;
 
 class EdgesCountCommand extends Command
@@ -41,8 +43,6 @@ class EdgesCountCommand extends Command
             $vendor = $config['vendor'] ?? array();
         }
 
-        $label = $input->getOption('label');
-
         if ($label) {
             $gremlin_command = 'g.E().hasLabel("'.$label.'").count();';
         } else {
@@ -63,6 +63,7 @@ class EdgesCountCommand extends Command
 
         try {
             $graph_connection->open();
+            $graph_connection->message->registerSerializer('\Brightzone\GremlinDriver\Serializers\Gson3', true);
         } catch (InternalException $e) {
             $output->writeln($e->getMessage());
 
