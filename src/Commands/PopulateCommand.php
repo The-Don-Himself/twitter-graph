@@ -374,7 +374,7 @@ class PopulateCommand extends Command
 
         if (false === $dryRun) {
             // Azure CosmosDB doesn't play nice with our implementation of retryable transactions
-            if ('azure' === $vendor_name) {
+            if (isset($vendor['name']) && 'azure' === $vendor['name']) {
                 foreach ($vertex_commands as $command) {
                     $graph_connection->send($command, 'session');
                 }
@@ -393,7 +393,7 @@ class PopulateCommand extends Command
 
         if (false === $dryRun) {
             // Azure CosmosDB doesn't play nice with our implementation of retryable transactions
-            if ('azure' === $vendor_name) {
+            if (isset($vendor['name']) && 'azure' === $vendor['name']) {
                 foreach ($vertex_commands as $command) {
                     $graph_connection->send($command, 'session');
                 }
