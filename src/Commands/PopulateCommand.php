@@ -1,6 +1,6 @@
 <?php
 
-namespace TheDonHimself\TwitterGraph\Graph\Commands;
+namespace TheDonHimself\TwitterGraph\Commands;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Brightzone\GremlinDriver\InternalException;
@@ -419,6 +419,8 @@ class PopulateCommand extends Command
         }
 
         $output->writeln('Graph Populated Successfully!');
+
+        return 0;
     }
 
     private function populateUsers(Users $user)

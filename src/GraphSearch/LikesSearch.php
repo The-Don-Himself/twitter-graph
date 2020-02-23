@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\GraphSearch;
+namespace TheDonHimself\TwitterGraph\GraphSearch;
 
 use TheDonHimself\GremlinOGM\Traversal\TraversalBuilder;
 

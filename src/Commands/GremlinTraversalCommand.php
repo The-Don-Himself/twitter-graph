@@ -1,6 +1,6 @@
 <?php
 
-namespace TheDonHimself\TwitterGraph\Graph\Commands;
+namespace TheDonHimself\TwitterGraph\Commands;
 
 use Brightzone\GremlinDriver\InternalException;
 use Brightzone\GremlinDriver\ServerException;

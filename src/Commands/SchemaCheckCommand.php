@@ -1,6 +1,6 @@
 <?php
 
-namespace TheDonHimself\TwitterGraph\Graph\Commands;
+namespace TheDonHimself\TwitterGraph\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

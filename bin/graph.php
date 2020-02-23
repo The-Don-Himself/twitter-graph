@@ -1,14 +1,14 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use TheDonHimself\TwitterGraph\Graph\Commands\EdgesCountCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\EdgesDropCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\GremlinTraversalCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\SchemaCheckCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\SchemaCreateCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\PopulateCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\VertexesCountCommand;
-use TheDonHimself\TwitterGraph\Graph\Commands\VertexesDropCommand;
+use TheDonHimself\TwitterGraph\Commands\EdgesCountCommand;
+use TheDonHimself\TwitterGraph\Commands\EdgesDropCommand;
+use TheDonHimself\TwitterGraph\Commands\GremlinTraversalCommand;
+use TheDonHimself\TwitterGraph\Commands\SchemaCheckCommand;
+use TheDonHimself\TwitterGraph\Commands\SchemaCreateCommand;
+use TheDonHimself\TwitterGraph\Commands\PopulateCommand;
+use TheDonHimself\TwitterGraph\Commands\VertexesCountCommand;
+use TheDonHimself\TwitterGraph\Commands\VertexesDropCommand;
 
 $autoloadFiles = array(__DIR__ . '/../vendor/autoload.php',
                        __DIR__ . '/../../../autoload.php');
