@@ -25,5 +25,7 @@ class SchemaCheckCommand extends Command
         (new SchemaCheck())->check($class_maps);
 
         $output->writeln('Graph Schema Check Completed Successfully');
+
+		return 0;
     }
 }

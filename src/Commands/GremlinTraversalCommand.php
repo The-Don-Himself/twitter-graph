@@ -86,5 +86,7 @@ class GremlinTraversalCommand extends Command
         $output->writeln(print_r($resultSet));
 
         $output->writeln('Command Took Appoximately : '.$command_time);
+
+		return 0;
     }
 }

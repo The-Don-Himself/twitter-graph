@@ -87,5 +87,7 @@ class VertexesDropCommand extends Command
         $graph_connection->close();
 
         $output->writeln('All Vertexes Dropped Successfully!');
+
+		return 0;
     }
 }

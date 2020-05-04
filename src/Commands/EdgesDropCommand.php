@@ -87,5 +87,7 @@ class EdgesDropCommand extends Command
         $graph_connection->close();
 
         $output->writeln('All Edges Dropped Successfully!');
+
+		return 0;
     }
 }

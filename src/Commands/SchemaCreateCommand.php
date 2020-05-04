@@ -124,5 +124,7 @@ class SchemaCreateCommand extends Command
         }
 
         $output->writeln('TwitterGraph Schema Created Successfully!');
+
+		return 0;
     }
 }

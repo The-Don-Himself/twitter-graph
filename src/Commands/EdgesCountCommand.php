@@ -80,5 +80,7 @@ class EdgesCountCommand extends Command
         }
 
         $graph_connection->close();
+
+		return 0;
     }
 }
